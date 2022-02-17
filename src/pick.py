@@ -63,7 +63,7 @@ def rmsd(p1, p2):
     """
     p1 = p1.reshape(-1, 3)
     p2 = p2.reshape(-1, 3)
-    return np.sqrt(np.sum(np.square(p1 - p2)) / len(atom_indices))
+    return np.sqrt(np.sum(np.square(p1 - p2)) / trajs.n_frames)
 
 
 # nonparametric fit
