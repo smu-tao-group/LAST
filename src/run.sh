@@ -4,8 +4,8 @@ mkdir -p ../trajs ../rst ../models ../imgs ../results
 
 # catch args
 pdb=$1
-max_iteration=${2:-10}
-patience=${3:-1}
+max_iteration=${2:-40}
+patience=${3:-5}
 
 # preliminary MD
 python prepare.py $pdb
