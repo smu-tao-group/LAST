@@ -11,7 +11,7 @@ patience=${3:-5}
 python prepare.py $pdb
 
 # iterative sampling
-for iteration in $(seq 1 $max_iteration)
+for iteration in $(seq 0 $max_iteration)
 do
   # check converge
   python converge.py $pdb $patience
