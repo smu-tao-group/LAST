@@ -5,6 +5,7 @@ seed structure selection
 
 import sys
 import os
+import glob
 import pickle
 import numpy as np
 from tensorflow import keras
@@ -174,3 +175,33 @@ pickle.dump(
     outliers,
     open(f"../results/{pdb}_out_{iter_round}.pkl", "wb")
 )
+
+# save rmsd
+trajs_dir = sorted(
+    glob.glob(f"../trajs/{pdb}_r*.dcd"),
+    key=lambda x: (int(x.split("_")[1][1:]), int(x.split("_")[2][1:-4])))
+
+# get the latest iteration
+trajs_dir = trajs_dir[-10:]
+
+ref = md.load(f"../inputs/{pdb}.pdb")
+ref = ref.atom_slice(
+    ref.topology.select_atom_indices("alpha")
+)
+
+trajs = md.load(trajs_dir, top=f"../inputs/{pdb}.prmtop")
+trajs = trajs.atom_slice(
+    trajs.topology.select_atom_indices("alpha")
+)
+
+rmsd = md.rmsd(trajs, ref) * 10
+rmsd_mean = np.mean(rmsd)
+
+# save mean rmsd
+if os.path.isfile(f"../results/{pdb}_rmsd.pkl"):
+    rmsds = pickle.load(open(f"../results/{pdb}_rmsd.pkl", "rb"))
+else:
+    rmsds = []
+
+rmsds.append(rmsd_mean)
+pickle.dump(rmsds, open(f"../results/{pdb}_rmsd.pkl", "wb"))
