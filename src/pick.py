@@ -31,11 +31,8 @@ frames = trajs.n_frames // (iter_round + 1)
 coors = trajs.xyz
 coors = coors.reshape(trajs.n_frames, -1)
 
-# use full
-training_coors = coors
-
 scaler = MinMaxScaler()
-training_coors_scaled = scaler.fit_transform(training_coors)
+coors_scaled = scaler.fit_transform(coors)
 
 # load latents and decoder
 latents = pickle.load(
@@ -48,7 +45,7 @@ decoder = keras.models.load_model(
 
 decoded_structure = decoder(latents).numpy()
 decoded_structure = scaler.inverse_transform(decoded_structure) * 10
-real_structure = scaler.inverse_transform(training_coors_scaled) * 10
+real_structure = scaler.inverse_transform(coors_scaled) * 10
 
 # get angles
 coors = get_angle(
