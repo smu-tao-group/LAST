@@ -3,12 +3,9 @@ channels:
   - conda-forge
 dependencies:
   - python=3.7
-  - pip
   - scikit-learn
   - openmm
   - mdtraj
   - MDAnalysis
-  - pip:
-    - tensorflow
-    - statsmodels
-    - numpy
+  - tensorflow
+  - statsmodels
