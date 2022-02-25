@@ -1,23 +1,25 @@
 #!/usr/bin/env python
 
+"""Calculate ADK angles
+"""
+
 import mdtraj as md
 import numpy as np
 
 
-# get heavy atoms
 def get_atoms(traj):
-    '''
+    """
     get atom slice
-    '''
+    """
     return traj.atom_slice(
         traj.topology.select_atom_indices("heavy")
     )
 
 
 def vector_angle(vector1, vector2):
-    '''
+    """
     calculate angle of two vectors
-    '''
+    """
     unit_vector1 = vector1 / np.linalg.norm(vector1)
     unit_vector2 = vector2 / np.linalg.norm(vector2)
     dot_product = np.dot(unit_vector1, unit_vector2)

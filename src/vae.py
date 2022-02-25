@@ -1,10 +1,4 @@
-#########################################################################
-# APEKS: A Python Library for Protein Simulations with Machine Learning.
-# Copyright (c) 2021-2021 The APEKS Development Team and contributors
-# All rights reserved.
-#
-# Released under the GNU Public License, v3 or any higher version.
-#########################################################################
+#!/usr/bin/env python
 
 """Variational autoencoder model
 """

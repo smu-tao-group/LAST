@@ -1,6 +1,6 @@
 #!/usr/bin/env python
-"""
-preliminary MD simulations
+
+"""Preliminary MD simulations
 """
 
 import sys

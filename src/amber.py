@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 
+"""Amber simulation
+"""
+
 from openmm.app import (
     HBonds, PME, Simulation, DCDReporter, StateDataReporter
 )

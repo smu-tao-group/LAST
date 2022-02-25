@@ -1,6 +1,6 @@
 #!/usr/bin/env python
-"""
-conduct multiple short MD simulations
+
+"""Conduct MD simulations
 """
 
 import sys

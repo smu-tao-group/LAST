@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 
+"""Convergence check
+"""
+
 import sys
 import os
 import pickle

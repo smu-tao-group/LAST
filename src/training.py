@@ -1,6 +1,6 @@
 #!/usr/bin/env python
-"""
-train VAE model
+
+"""Train VAE model
 """
 
 import sys

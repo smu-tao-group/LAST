@@ -1,6 +1,6 @@
 #!/usr/bin/env python
-"""
-seed structure selection
+
+"""Seed structure selection
 """
 
 import sys
