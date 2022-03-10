@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-mkdir -p ../trajs ../rst ../models ../imgs ../results
+mkdir -p ../trajs ../rst ../models ../results
 
 # catch args
 pdb=$1

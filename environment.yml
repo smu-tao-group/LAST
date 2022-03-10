@@ -1,4 +1,4 @@
-name: iterative
+name: last
 channels:
   - conda-forge
 dependencies:
