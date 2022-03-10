@@ -12,8 +12,6 @@ from tensorflow import keras
 from sklearn.preprocessing import MinMaxScaler
 import mdtraj as md
 import statsmodels.api as sm
-import matplotlib.pyplot as plt
-from angle import get_angle
 
 
 pdb = sys.argv[1]
@@ -46,14 +44,6 @@ decoder = keras.models.load_model(
 decoded_structure = decoder(latents).numpy()
 decoded_structure = scaler.inverse_transform(decoded_structure) * 10
 real_structure = scaler.inverse_transform(coors_scaled) * 10
-
-# get angles
-coors = get_angle(
-    f"../trajs/{pdb}_aligned.dcd",
-    f"../inputs/{pdb}.prmtop", pdb=pdb
-)
-xs = np.array(coors[0])
-ys = np.array(coors[1])
 
 
 def rmsd(p1, p2):
@@ -131,18 +121,9 @@ while idx >= 0 and len(outliers) < 10:
     idx -= 1
 
 
-# plot angles and seed structures
-plt.figure(figsize=(8, 6), dpi=400)
-plt.scatter(xs, ys)
-plt.scatter(xs[outliers], ys[outliers], c='red')
-plt.savefig(f'../imgs/{pdb}_r{iter_round}_angle.png')
-
-
 # delete data to spare some space
 del trajs
 del coors
-del training_coors
-del training_coors_scaled
 
 
 for i in range(len(outliers)):
