@@ -3,6 +3,8 @@
 [![LGTM](https://img.shields.io/lgtm/grade/python/github/smu-tao-group/ADMET_XGBoost.svg?style=square)](https://lgtm.com/projects/g/HTian1997/getarticle)
 [![DOI](http://img.shields.io/badge/DOI-arXiv:2204.13040-B31B1B.svg)](https://arxiv.org/abs/2204.13040)
 
+<b>This work has been awarded the Chemical Computing Group (CCG) Excellence Award for Graduate Students by ACS Computers In Chemistry (COMP) division in ACS Fall 2022.</b>
+
 ## Installation
 
 ```bash
