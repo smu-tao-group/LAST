@@ -6,6 +6,7 @@
 
 ## News
 
+- (2022.11) This paper has been accepted by [MLCB 2022](https://sites.google.com/cs.washington.edu/mlcb2022/) as Spotlight (top 12%).
 - (2022.06) This paper has been accepted by [ICML 2022 Workshop AI4Science](http://www.ai4science.net/icml22/).
 - (2022.04) This work has been awarded the Chemical Computing Group (CCG) Excellence Award for Graduate Students by ACS Computers In Chemistry (COMP) division in ACS Fall 2022.
 
