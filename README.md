@@ -1,6 +1,5 @@
 # LAST: Latent Space Assisted Adaptive Sampling for Protein Trajectories
 [![Python](https://img.shields.io/badge/Python-3.7+-blue.svg)](https://www.python.org)
-[![LGTM](https://img.shields.io/lgtm/grade/python/github/smu-tao-group/ADMET_XGBoost.svg?style=square)](https://lgtm.com/projects/g/HTian1997/getarticle)
 [![DOI:10.1021/acs.jcim.2c01213](http://img.shields.io/badge/DOI-10.1021/acs.jcim.2c01213-B31B1B.svg)](https://doi.org/10.1021/acs.jcim.2c01213)
 
 
